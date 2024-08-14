@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- LINKS + SCRIPTS + SITE NAME -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"> 
+    <meta name="description" content="Student work by Hao Lee from Colloquium 1 of the Columbia GSAPP CDP Program in 2024." /> <!-- Provides a description of the document for search engines -->
+        
+    <link rel="icon" href="https://gsapp-cdp.github.io/colloquium-1-2024/favicon.ico" sizes="any"> <!-- Sets the favicon for the document -->
+    <link rel="icon" href="https://gsapp-cdp.github.io/colloquium-1-2024/favicon.svg" type="image/svg+xml"> <!-- Sets the SVG favicon for the document -->
+    <link href="https://gsapp-cdp.github.io/colloquium-1-2024/normalize.css" rel="stylesheet" /> <!-- Links to a CSS file for normalizing styles across browsers -->
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnects to Google Fonts for faster font loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to Google Fonts for faster font loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- Links to the Poppins font family from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400&display=swap"> <!-- Links to the Host Grotesk font family from Google Fonts -->
+        
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/> <!-- Links to the Leaflet CSS for mapping -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script> <!-- Includes the Leaflet library for mapping -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet-src.js"></script> <!-- Includes the Leaflet source code for mapping -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/1.2.0/leaflet.ajax.min.js"></script> <!-- Includes the Leaflet Ajax library for dynamic mapping data -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> <!-- Includes the jQuery library for JavaScript functionality -->
+
+    <link rel="stylesheet" href="style.css">
+    <title>Hao Lee</title>
+</head>
+
+<div id="draggableBox">
+    <ul>
+        <br>
+        <li><a href="#section1" class="scroll-link">Guerrilla Urbanism</a></li>
+        <br><hr><br>
+        <li><a href="#section2a" class="scroll-link">The Empty Metropolis</a></li>
+        <li><a href="#section3a" class="scroll-link">Voids</a></li>
+        <li><a href="#section4a" class="scroll-link">Reusenaissance</a></li>
+        <li><a href="#section5a" class="scroll-link">To Be a Gorilla</a></li>
+        <br><hr><br>
+        <li><a href="#section6a" class="scroll-link">Miscellaneous</a></li>
+    </ul>
+</div>
+
+<div id="draggableBox2">
+    <ul>
+        <br>
+        <div class="switch-container">
+            <li><a><button id="invert-toggle" class="styled-button"><u>Dark Mode</u></button></a></li>
+        </div>
+    <li><a><button id="navButton"><u>Fullscreen</u></button></a></li>
+    </ul>
+</div>
+
+<div id="draggableBox3">
+    <div class="scrollable-content">
+        <ul id="descriptionContent"></ul>
+    </div>
+</div>
+
+<div id="title-01"
+style="position: fixed; bottom: 80px; right: 35px; z-index: 1000; text-align: right;">
+    <a href="https://www.behance.net/haoleearch">
+        <img
+        src="title-01.png"
+        alt="Title-01"
+        class="colored-image"
+        style="float: right;">
+    </a>
+</div>
+
+
+
+
+<header>
+    <h0>
+        <a href="https://www.arch.columbia.edu/" target="_blank">
+            Columbia GSAPP
+        </a>
+    </h0>
+    <br>
+    <h4>
+        <a href="https://www.arch.columbia.edu/programs/15-m-s-computational-design-practices">
+        Computational Design Practices
+        </a>
+    </h4>
+
+    <!-- <h3>
+        <a href="/">Home</a> → <a href="/work">Student Work</a> → Hao Lee
+    </h3> -->
+</header>
+
+<body>
+    <div class="container">
+        <!-- GUERRILLA URBANISM -->
+        <section id="section1" style="position: relative;">
+            <div class="spacer"></div>
+            <img src="title-02.webp" alt="Title 02" style="position: absolute; top: 37.5vh; left: 78vw; width: 40px; height: auto; z-index: 1; mix-blend-mode: multiply;">
+            <h1 style="text-shadow: 
+            1px 1px 0 #dbdbdb, 
+            -1px -1px 0 #dbdbdb, 
+            1px -1px 0 #dbdbdb, 
+            -1px 1px 0 #dbdbdb;">Guerrilla Urbanism</h1>
+            <span class="word-container">
+                <div class="h2a">
+                    <span id="random-word-A" class="word-A">Windmill</span>
+                    <span class="center-word">to</span>
+                    <span id="random-word-B" class="word-B">skate park</span>
+                </div>
+            </span>      
+        </section>
+
+        <!-- THE EMPTY METROPOLIS -->
+        <section id="section2a">
+                <div class="spacer"></div>
+                <h1>The Empty Metropolis</h1>
+                <h2><span>
+                    Architecture as <span class="strikethrough">Living Spaces</span> Assets
+                </h2></span>
+                <p>
+                    Our markets prioritize capital investment over the built environment.
+                    <br>
+                    Can we identify this phenomenon? How might we challenge it?
+                </p>
+        </section>
+        <section id="section2b">
+            <div class="UI-container">
+                <img src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/UI-04.webp" alt="UI-04" class="UI-top-image-1">
+                <img src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/UI-05.webp" alt="UI-05" class="UI-top-image-2">
+                <div class="UI-background"></div>
+                <div class="UI-overlay"></div>
+                <div class="UI-cursor-mask">
+                    <span class="status-text top">Occupied</span>
+                    <span class="status-text bottom">Vacant</span>
+                </div>
+                <img src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/UI-03.webp" alt="UI-03" class="UI-corner-image">
+            </div>
+        </section>
+        <section id="section2c">
+            <div id="mindmap-container">
+                <script src="https://d3js.org/d3.v7.min.js"></script>
+                <script src="mindmap.js"></script>
+            </div>
+            <div class="reference-container">
+                    <div class="reference-item">
+                        <a href="https://whitney.org/artists/3592" target="_blank" rel="noopener noreferrer">
+                            <img src="https://whitneymedia.org/assets/artwork/43339/T_2013_203_cropped.jpeg" alt="Gordon Matta-Clark Work" style="filter: invert(1);">
+                        </a>
+                        <p style="font-size: 0.9rem !important;"><b>Conical Intersect</b>, 1975. Gordon Matta-Clark.<br>Whitney Museum of American Art.</p>
+                    </div>
+                    <div class="reference-item">
+                        <a href="https://borrow.nypl.org/search/card?id=dd907ae1-1593-5bb6-adf8-cc0a54a05862&entityType=FormatGroup" target="_blank" rel="noopener noreferrer">
+                            <img src="https://secure.syndetics.com/index.aspx?isbn=0395294576/lc.gif&upc=&client=nyplvega&type=unbound" alt="David Macaulay Work" style="filter: invert(1);">
+                        </a>
+                        <p style="font-size: 0.9rem !important;"><b>Unbuilding</b>, 1987. David Macaulay.<br>New York Public Library.</p>
+                    </div>
+                    <div class="reference-item">
+                        <a href="https://lebbeuswoods.wordpress.com/2011/12/15/war-and-architecture-three-principles/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://lebbeuswoods.wordpress.com/wp-content/uploads/2011/12/lwblog-wa-7.jpg" alt="Lebbeus Woods Work" style="filter: invert(1) grayscale(100%);">
+                        </a>
+                        <p style="font-size: 0.9rem !important;"><b>War and Architecture</b>, 1993. Lebbeus Woods.<br>Lebbeus Woods.</p>
+                    </div>
+                    <div class="reference-item">
+                        <a href="https://www.belvedere.at/en/rachel-whiteread-1" target="_blank" rel="noopener noreferrer">
+                            <img src="https://www.belvedere.at/sites/default/files/jart-images/_523993615719_0.jpg" alt="Rachel Whiteread Work" style="filter: invert(1) grayscale(100%);">
+                        </a>
+                        <p style="font-size: 0.9rem !important;"><b>Chicken Shed</b>, 2017. Rachel Witheread.<br>Belvedere Museum Wien.</p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- VOIDS -->
+        <section id="section3a">
+                <div class="spacer"></div>
+                <h1>Voids</h1>
+                <h2><span>
+                    Rebuilding by Unbuilding: <i>Booleanify!</i>
+                </h2></span>
+                <p>
+                    It's 2024.
+                    <br>
+                    Land resources have become increasingly scarce.
+                    <br>
+                    Adaptive Gorilla proudly presents the ultimate reuse package: Booleanify!
+                </p>
+                <div class="spacer"></div>
+        </section>
+        <section id="section3b">
+            <div class="img-container-outer">
+                <div class="gradient-rectangle">
+                    <span class="text-left">Less Daylight</span>
+                    <span class="text-right">More Daylight</span>
+                </div>
+                <div class="img-container">
+                    <img class="img" id="image" src="https://raw.githubusercontent.com/halfward/Coloquium-I-a/main/Frame_00000.png" alt="Slidable Image">
+                    <img class="watermark" src="watermark-01.webp" alt="Watermark">
+                </div>
+            </div> 
+        </section>
+
+        <!-- REUSENAISSANCE -->
+        <section id="section4a">
+                <div class="spacer"></div>
+                <div class="content-wrapper">
+                    <div class="heading-container">
+                        <h1>Reusenaissance</h1>
+                        <div class="overlay-words">
+                            <span class="overlay-word-1">Reuse</span>
+                            <span class="overlay-word-2">Renaissance</span>
+                        </div>
+                        <h2><span>
+                            Speculative Evolution: <i>Balloonify!</i>
+                        </h2></span>
+                        <p>
+                            It's 2124.
+                            <br>
+                            There are no more developable lands.
+                            <br>
+                            This shift has given rise to a new movement: the Reusenaissance.
+                        </p>
+                    </div>
+                </div>
+
+                    
+                <div class="spacer"></div>
+        </section>
+        <section id="section4b">
+            <div id="dvd-screensaver">
+                <img src="promo-06.webp" alt="DVD Screensaver">
+            </div>
+            <div class="img-container">
+                <img class="watermark" src="watermark-02.webp" alt="Watermark">
+            </div>
+            <div class="video-container">
+                <div class="inner-video-container">
+                    <a href="https://halfward.github.io/balloonify/" target="_blank">
+                        <video src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/balloonify-landing-page.mp4" 
+                            autoplay loop muted playsinline>
+                        </video>
+                    </a>
+                </div>
+            </div>
+            <div class="image-overlay-container">
+                <a href="https://halfward.github.io/balloonify/" target="_blank">
+                    <img src="promo-01.webp" class="promo-image" id="promo-01" alt="Promo 01">
+                </a>
+                <a href="https://halfward.github.io/balloonify/" target="_blank">
+                    <img src="promo-03.webp" class="promo-image" id="promo-03" alt="Promo 03">
+                </a>
+                <a href="https://halfward.github.io/balloonify/" target="_blank">
+                    <img src="promo-04.webp" class="promo-image" id="promo-04" alt="Promo 04">
+                </a>
+                <a href="https://halfward.github.io/balloonify/" target="_blank">
+                    <img src="promo-05.webp" class="promo-image" id="promo-05" alt="Promo 05">
+                </a>
+            </div>
+            <swiper-container
+                loop
+                direction="vertical"
+            >
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-02.webp');"><div class="swiper-text"></div></swiper-slide>
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-01.webp');"><div class="swiper-text"></div></swiper-slide>
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-05.webp');"><div class="swiper-text"></div></swiper-slide>
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-03.webp');"><div class="swiper-text"></div></swiper-slide>
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-06.webp');"><div class="swiper-text"></div></swiper-slide>
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-07.webp');"><div class="swiper-text"></div></swiper-slide>
+                <swiper-slide style="background-image: url('https://raw.githubusercontent.com/halfward/Colloquium-I/main/screenshots-04.webp');"><div class="swiper-text"></div></swiper-slide>
+            </swiper-container>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const swiperEl = document.querySelector('swiper-container');
+
+                    swiperEl.swiper.params.autoplay = {
+                        delay: 2000,
+                        disableOnInteraction: false
+                    };
+                    swiperEl.swiper.autoplay.start();
+                });
+            </script>
+        </section>
+
+        <!-- TO BE A GORILLA -->
+        <section id="section5a">
+                <div class="spacer"></div>
+                <h1>To Be a Gorilla</h1>
+                <h2><span>
+                    Possibilities...
+                </h2></span>
+                <p style="text-align: justify; text-align-last: justify;">
+                    Urban Planner. Sustainability Consultant. Environmental Designer. Systems Thinker. Digital Fabricator. Heritage Conservationist. Spatial Analyst. Interactive Media Artist. Smart City Developer. Ecological Architect. Geospatial Data Specialist. Public Engagement Strategist. Computational Designer. Resilience Planner. Renewable Energy Engineer. Cultural Preservationist. Adaptive Reuse Specialist. Building Performance Analyst. Community Development Advocate. Information Architect. Virtual Reality Designer. Urban Resilience Expert. Environmental Impact Analyst. Data-Driven Designer. Collaborative Architect. Mixed Reality Architect. Historic Preservationist. Resource Efficiency Consultant. Urban Systems Engineer. Regenerative Design Specialist. Social Impact Designer. Digital Reuse Strategist. Architecture Technologist. Policy Advocate. Interactive Space Designer. Climate Action Coordinator. Landscape Restoration Expert. Digital Transformation Consultant.
+                </p>
+        </section>
+        <section id="section5b">
+            <div class="spacer2"></div>
+                <div class="model-container">
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-1.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-2.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-3.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-4.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-5.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-6.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-7.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-8.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-9.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-10.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-11.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-12.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-13.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-14.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-15.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-16.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-17.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-18.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-19.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-20.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-21.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-22.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-23.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-24.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-25.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-26.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-27.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-28.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-29.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                    <model-viewer src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/tower-30.glb" auto-rotate rotation-per-second="45deg" field-of-view="1deg" camera-orbit="0deg 90deg 1600m">
+                    </model-viewer>
+                </div>
+        </section>
+
+        <!-- MISCELLANEOUS -->
+        <section id="section6a">
+            <div class="spacer"></div>
+            <h1>Miscellaneous</h1>
+            <h2><span>
+                Content Archive *WIP*
+            </h2></span>
+            <p>
+                CDP assignments from the Summer semester.<br>
+                Too experimental to fit the narrative, too much effort to abandon.
+            </p>
+        </section>
+        <section id="section6b">
+            <div class="iframe-container">
+                <div class="iframe-wrapper">
+                    <iframe src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/CDP-ColloquiumI-02.png" 
+                    data-full="https://raw.githubusercontent.com/halfward/Colloquium-I/main/CDP-ColloquiumI-02.png" 
+                    data-description="Description for image 1"></iframe>
+                    <div class="iframe-overlay"></div>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/CDP-ColloquiumI-03.png" 
+                    data-full="https://raw.githubusercontent.com/halfward/Colloquium-I/main/CDP-ColloquiumI-03.png" 
+                    data-description="Description for image 2"></iframe>
+                    <div class="iframe-overlay"></div>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe src="https://raw.githubusercontent.com/halfward/Colloquium-I/main/CDP-ColloquiumI-05.png" 
+                    data-full="https://raw.githubusercontent.com/halfward/Colloquium-I/main/CDP-ColloquiumI-05.png" 
+                    data-description="Description for image 3"></iframe>
+                    <div class="iframe-overlay"></div>
+                </div>
+            </div>
+            
+            <!-- Modal -->
+            <div id="modal" class="modal" style="display: none;">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modal-img">
+                <div id="caption"></div>
+            </div>
+        </seciton>
+
+
+        <section id="section6c">
+            
+        </section>
+        <seciton id="section6d">
+            
+        </section>
+    </div>
+
+    <footer>
+        © 2024 Hao Lee.<br>
+        All rights reserved.
+    </footer>
+</body>
+
+<!-- SCRIPTS -->
+<div>
+    <script src="main2.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.14.8/build/matter.min.js"></script> <!-- Includes the Matter.js library for physics simulations -->
+    <script src="https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js"></script> <!-- Includes the Interact.js library for interactive elements -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script> <!-- Includes the Model-Viewer library for 3D model rendering -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script> <!-- Includes the Papa Parse library for CSV parsing -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> <!-- Swiper library -->
+</div>
+
+</html>
